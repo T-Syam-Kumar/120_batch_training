@@ -1,1 +1,10 @@
-
+#using Index
+def palindrome(l,nums,r):
+    if l>=r:
+        return True
+    if nums[l] != nums[r]:
+        return False
+    return palindrome(l+1,nums,r-1)
+    pass
+nums = [2,5,4,1,6,7,2]
+print("Palindrome" if palindrome(0,nums,len(nums)-1) else "Not a Palindrome")
