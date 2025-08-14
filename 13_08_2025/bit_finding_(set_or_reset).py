@@ -1,0 +1,12 @@
+def extract_bit(value,index):
+    temp = 1<<index
+    res = value & temp
+    if res == 0:
+        print("Reset")
+    else:
+        print("Set")
+    #print("Reset" if value & (1<<index) == 0 else "Set")
+
+n= int(input("Enter a value : "))
+m = int(input("enter the index : "))
+extract_bit(n,m)
